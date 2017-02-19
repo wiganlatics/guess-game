@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GuessGame.Properties
-{
-
-
+namespace GuessGame.Properties {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -22,49 +22,185 @@ namespace GuessGame.Properties
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources
-    {
-
+    internal class Resources {
+        
         private static global::System.Resources.ResourceManager resourceMan;
-
+        
         private static global::System.Globalization.CultureInfo resourceCulture;
-
+        
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources()
-        {
+        internal Resources() {
         }
-
+        
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager
-        {
-            get
-            {
-                if ((resourceMan == null))
-                {
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("GuessGame.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
             }
         }
-
+        
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture
-        {
-            get
-            {
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
                 return resourceCulture;
             }
-            set
-            {
+            set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error: Could not display form. Message: {0}.
+        /// </summary>
+        internal static string ErrorDisplayingForm {
+            get {
+                return ResourceManager.GetString("ErrorDisplayingForm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Guess is greater than maximum value: {0}..
+        /// </summary>
+        internal static string GuessAboveMaximum {
+            get {
+                return ResourceManager.GetString("GuessAboveMaximum", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Guess is less than minimum value: {0}..
+        /// </summary>
+        internal static string GuessBelowMinimum {
+            get {
+                return ResourceManager.GetString("GuessBelowMinimum", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cannot increment guesses as doing so would cause an overflow..
+        /// </summary>
+        internal static string GuessesOverflowError {
+            get {
+                return ResourceManager.GetString("GuessesOverflowError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Guess is not a valid integer..
+        /// </summary>
+        internal static string GuessNotANumber {
+            get {
+                return ResourceManager.GetString("GuessNotANumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Guess is greater than answer..
+        /// </summary>
+        internal static string GuessTooLarge {
+            get {
+                return ResourceManager.GetString("GuessTooLarge", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Guess is less than answer..
+        /// </summary>
+        internal static string GuessTooSmall {
+            get {
+                return ResourceManager.GetString("GuessTooSmall", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You Lose! You had too many guesses!.
+        /// </summary>
+        internal static string LoseMessage {
+            get {
+                return ResourceManager.GetString("LoseMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Max guesses must be greater than zero..
+        /// </summary>
+        internal static string MaxGuessesMustBeAboveZero {
+            get {
+                return ResourceManager.GetString("MaxGuessesMustBeAboveZero", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cannot increment guess count beyond maximum. Current guess count: {0}. Maximum guess count {1}..
+        /// </summary>
+        internal static string MaximumGuessesError {
+            get {
+                return ResourceManager.GetString("MaximumGuessesError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Guess Game.
+        /// </summary>
+        internal static string MessageBoxTitle {
+            get {
+                return ResourceManager.GetString("MessageBoxTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The minimum answer &apos;{0}&apos; must be less than maximum answer &apos;{1}&apos;..
+        /// </summary>
+        internal static string MinMustBeLessThanMax {
+            get {
+                return ResourceManager.GetString("MinMustBeLessThanMax", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Must provide a valid number generator..
+        /// </summary>
+        internal static string NumberGeneratorMustNotBeNull {
+            get {
+                return ResourceManager.GetString("NumberGeneratorMustNotBeNull", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unknown guess result..
+        /// </summary>
+        internal static string UnknownGuessResult {
+            get {
+                return ResourceManager.GetString("UnknownGuessResult", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You Win! You had {0} guesses!.
+        /// </summary>
+        internal static string WinMessage {
+            get {
+                return ResourceManager.GetString("WinMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The guesses count variable is the wrong type. Expected type: &apos;{0}&apos;. Actual type:&apos;{1}&apos;..
+        /// </summary>
+        internal static string WrongTypeError {
+            get {
+                return ResourceManager.GetString("WrongTypeError", resourceCulture);
             }
         }
     }

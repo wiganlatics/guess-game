@@ -46,7 +46,7 @@
     
     mimetype: application/x-microsoft.net.object.binary.base64
     value   : The object must be serialized with 
-            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
     
     mimetype: application/x-microsoft.net.object.soap.base64
@@ -60,6 +60,7 @@
             : and then encoded with base64 encoding.
     -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
@@ -68,9 +69,10 @@
               <xsd:sequence>
                 <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="name" use="required" type="xsd:string" />
               <xsd:attribute name="type" type="xsd:string" />
               <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
@@ -85,9 +87,10 @@
                 <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
                 <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
               <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
               <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
@@ -109,9 +112,57 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ErrorDisplayingForm" xml:space="preserve">
+    <value>Error: Could not display form. Message: {0}</value>
+  </data>
+  <data name="GuessAboveMaximum" xml:space="preserve">
+    <value>Guess is greater than maximum value: {0}.</value>
+  </data>
+  <data name="GuessBelowMinimum" xml:space="preserve">
+    <value>Guess is less than minimum value: {0}.</value>
+  </data>
+  <data name="GuessesOverflowError" xml:space="preserve">
+    <value>Cannot increment guesses as doing so would cause an overflow.</value>
+  </data>
+  <data name="GuessNotANumber" xml:space="preserve">
+    <value>Guess is not a valid integer.</value>
+  </data>
+  <data name="GuessTooLarge" xml:space="preserve">
+    <value>Guess is greater than answer.</value>
+  </data>
+  <data name="GuessTooSmall" xml:space="preserve">
+    <value>Guess is less than answer.</value>
+  </data>
+  <data name="LoseMessage" xml:space="preserve">
+    <value>You Lose! You had too many guesses!</value>
+  </data>
+  <data name="MaxGuessesMustBeAboveZero" xml:space="preserve">
+    <value>Max guesses must be greater than zero.</value>
+  </data>
+  <data name="MaximumGuessesError" xml:space="preserve">
+    <value>Cannot increment guess count beyond maximum. Current guess count: {0}. Maximum guess count {1}.</value>
+  </data>
+  <data name="MinMustBeLessThanMax" xml:space="preserve">
+    <value>The minimum answer '{0}' must be less than maximum answer '{1}'.</value>
+  </data>
+  <data name="NumberGeneratorMustNotBeNull" xml:space="preserve">
+    <value>Must provide a valid number generator.</value>
+  </data>
+  <data name="WinMessage" xml:space="preserve">
+    <value>You Win! You had {0} guesses!</value>
+  </data>
+  <data name="WrongTypeError" xml:space="preserve">
+    <value>The guesses count variable is the wrong type. Expected type: '{0}'. Actual type:'{1}'.</value>
+  </data>
+  <data name="MessageBoxTitle" xml:space="preserve">
+    <value>Guess Game</value>
+  </data>
+  <data name="UnknownGuessResult" xml:space="preserve">
+    <value>Unknown guess result.</value>
+  </data>
 </root>
