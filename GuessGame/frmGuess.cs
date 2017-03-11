@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+ * Licensed under MIT License. Copyright (c) 2017 Matthew Wright. See LICENSE.txt in solution root for further details.
+ */
+
+using System;
 using System.Windows.Forms;
 
 namespace GuessGame
